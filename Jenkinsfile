@@ -19,7 +19,7 @@ pipeline {
         }
         stage ('Deploy to Staging PC'){
             steps {
-                build job: 'Deploy-to-staging-pc'
+                build job: 'deploy-to-stagin'
             }
         }
 
@@ -29,7 +29,7 @@ pipeline {
                     input message:'Approve PRODUCTION Deployment?'
                 }
 
-                build job: 'Deploy-to-Prod-pc'
+                build job: 'Deploy-to-Prod'
             }
             post {
                 success {
