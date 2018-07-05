@@ -1,10 +1,10 @@
 pipeline {
   agent any
-  stages{
-    stage('Build'){
-      steps {
-        sh 'clean package'
-      }
+  stages {
+    stage('Build') {
+        steps {
+         sh 'mvn clean package'
+        }
       post {
         success {
             echo 'Now archiving ....'
